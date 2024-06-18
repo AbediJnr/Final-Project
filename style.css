@@ -1,0 +1,652 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+
+/* DARK MODE */
+.darkmode{
+    background-color: black;
+    color: white;
+iconify-icon{
+    color: white;
+}
+.shoppie{
+    color: white;
+}
+.dot{
+    background-color: #a8b5b5;
+}
+input{
+    background-color: #a8b5b5;
+    border: none;
+}
+.offcanvas-end{
+    background-color: transparent;
+    color: white;
+}
+.offcanvas-body{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+.btn-close{
+    background-color: #fff;
+}
+.currency-text{
+    color: white !important;
+}
+.theme-button{
+    background-color: #09ec82;
+    border: none;
+}
+.cross{
+    color: white;
+}
+hr{
+    color: white;
+}
+.line{
+    border: 1px solid white;
+}
+.line-under{
+    border: 1px solid white;
+}
+.edit-item-btn{
+    background-color: #09ec82;
+}
+.delete-item-btn{
+    background-color: red;
+}
+.edit-item-btn:hover{
+    background-color: #2d7755;
+	transition: 0.3s;
+}
+.delete-item-btn:hover{
+    background-color: rgb(138, 3, 3);
+	transition: 0.3s;
+}
+.modal-content{
+    background-color: black;
+    border: 1px solid white;
+}
+.toast-body{
+    color: black;
+}
+}
+
+/* OTHERS SECTION */
+.hide{
+    display: none;
+}
+
+.strike-through-text{
+    text-decoration: line-through;
+    color: #ff0000;
+}
+
+.main-body{
+    width: 93% !important;
+    height: 100vh;
+    padding-top: 1em;
+}
+
+/* HEADER SECTION  */
+.app_header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+h1{
+    font-size: xx-large !important;
+    font-weight: bolder !important;
+}
+
+.shoppie-header{
+    width: 12%;
+}
+
+.dot{
+    height: 9px;
+    width: 9px;
+    background-color:blue ;
+    border-radius: 50%;
+    position: fixed;
+    margin-left: 3.8em;
+}
+
+.one{
+    width: 70px;
+    border: 2px solid #a8b5b5;
+    border-radius: 9px;
+    position: fixed;
+    display: flex;
+    margin-top: 0.1em;
+}
+
+.two{
+    width: 33px;
+    border: 2px solid rgb(0, 89, 255);
+    border-radius: 9px;
+    position: fixed;
+    display: flex;
+    margin-left: 2.3em;
+    margin-top: 0.1em;
+}
+
+iconify-icon{
+    font-size: 23px;
+}
+
+/* ADD-ITEM SECTION  */
+.phone-screen{
+    width: 100%;
+}
+
+#cross{
+    font-size: 1.6rem;
+    display: flex;
+}
+
+#up{
+    font-size: 1.6rem;
+    display: none;
+}
+
+hr{
+  display: flex;
+  width: 90%;
+  position: relative;
+  left: 36px;
+  bottom: 28px;  
+}
+
+.add-item{
+    width: 100%;
+	padding-top:20px ;
+}
+
+.name-quantity-price{
+    width: 50% !important;
+    height: auto;
+    overflow-y: hidden;
+	font-size: small;
+}
+
+.calculation{
+    width: 50% !important;
+    height: auto;
+    font-size: 17px;
+    gap: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.col-12 a{
+    display: flex;
+}
+
+/* Remove arrows from number input fields */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.add-item-button{
+    display: flex !important;
+    padding: 0.6em;
+    background-color: #09ec82 !important;
+    border: none !important;
+}
+
+.add-item-button:hover{
+    background-color: #2d7755 !important;
+}
+
+.label{
+	font-size: medium;
+}
+
+.total{
+    width: auto;
+    height: auto;
+    background:#67afaf38;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.unpurchased{
+    width: auto;
+    height: auto    ;
+    background:#67afaf38;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;    
+    overflow: hidden;
+}
+
+.value {
+    color: #ff0000;
+    overflow: hidden; 
+}
+
+/* BUTTONS SECTION */
+.buttons{
+    width: 100%;
+}
+
+.btn-container{
+    width: 76%;
+    margin-top: 1.3em;
+}
+
+/* ITEMS LIST SECTION */
+.add-item-list-section-background-color{
+	background-color: pink;
+}
+
+.line{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.112);
+    border-radius: 3px;
+    display: flex;
+	margin-top: 0.6em;
+}
+
+.line-under{
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.112);
+    border-radius: 1px;
+    display: flex;
+	margin-bottom: 0.3em;
+}
+
+.listed-items {
+    width: 100%;
+}
+
+.items-section{
+    width: 100%;
+}
+
+.items-list{
+    width: 100%;
+    display: flex;
+	padding: 7px;
+}
+
+.checkbox{
+    padding: 5px;
+}
+
+.checkbox-main{
+    width: 15px;
+    height: 15px;
+}
+
+.text-section{
+    width: 80%;
+    text-align: center;  
+}
+
+.text{
+    font-size: small
+}
+
+.edit-del{
+    gap: 6px;
+    display: flex;
+}
+
+.edit-item-btn{
+	width: auto;
+	height: auto;
+    border: 3px solid #09ec82;
+    background-color: #09ec82;
+}
+
+.edit-item{
+    color: white;
+}
+
+.edit-item-btn:hover{
+    border-radius: none;
+    border:3px solid #2d7755;
+    background-color: #2d7755;
+	transition: 0.3s;
+}
+
+.delete-item-btn{
+	width: auto;
+	height: auto;
+	border: 3px solid red;
+	background-color: red;
+}
+
+.delete-item{
+    color: white;
+}
+
+.delete-item-btn:hover{
+    border:3px solid rgb(138, 3, 3);
+    border-radius: none;
+    background-color: rgb(138, 3, 3);
+	transition: 0.3s;
+}
+
+.nothing{
+    margin-top: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nothing-yet-section{
+    margin-top: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* OFF-CANVAS SECTION */
+.btn-close{
+    background-color: #fff !important;
+    position: absolute;
+    top: 50px;
+    left: 309px;
+}
+
+.offcanvas-end{
+    display: none;
+    font-size:15px;
+    background-color: transparent !important;
+}
+
+.offcanvas-body{
+    width: 43% !important;
+    height: 33vh !important;
+    background-color: white;
+    position:absolute;
+    top: 76px;
+    left: 200px;
+    border: none;
+}
+
+.currency{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.currency-text{
+    width: 26px;
+    height: 26px;
+    padding: 3.6px 0;
+    border: none;
+    font-size: large;
+    text-align: center;
+    background-color: #67afaf38;
+}
+
+.theme{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.theme-button{
+    width: 26.6px;
+    height: 26.6px;
+    border: none;
+    text-align: center; 
+    background-color: #67afaf38;
+}
+
+.quick-action-button {
+	width: 100%;
+}
+
+.offcanvas-delete-all-button{
+    border: red;
+    color: white;
+    background-color: red;
+}
+
+.offcanvas-purchase-all-button{
+    border: blue;
+    color: white;
+    background-color: blue;
+}
+
+/* MODALS SECTION*/
+.modal-dialog{
+    width: 20% !important;
+}
+
+.toast-container{
+	width: auto !important;
+	height: auto !important;
+}
+
+.toast-body{
+    background: #09ec82;
+}
+
+
+/* MEDIA QUERY SECTION */
+@media (max-width:770px){
+    .phone-screen{
+        width: 100%;
+        display: block;
+    }
+    .name-quantity-price{
+        width: 100%;
+    }
+    form{
+        display: none;
+    }
+    div .row{
+        width: 100%;
+        display: inline-block;
+    }
+    .name-quantity-price {
+        width: 100%;
+    }
+
+    .quantity,
+    .price {
+        width: 157px !important;
+        display: inline-block;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .quantity a,
+    .price a{
+        display: flex;
+    }
+
+    .add-item-button {
+        width: 99%;        
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .calculation{
+        width: 100% !important;
+        display: -ms-inline-grid;
+    } 
+
+    .total, .unpurchased {
+        width: 100%;
+    }
+    
+    .btn-container{
+        min-width: 100%;
+    }
+
+    .offcanvas-body{
+        width: 43% !important;
+        height: 33vh !important;
+    }
+} 
+
+
+
+/* @media (max-width:700px){
+    .mobile-menu{
+        display: flex;
+    } */
+
+
+
+/* Responsiveness
+
+@media screen and (min-width: 770px) {
+	/* app form */
+	.app__form.hidden {
+		max-height: 100%;
+	}
+
+	/* app form toggler */
+	.app__form-toggler {
+		display: none;
+	}
+/* } */
+
+@media screen and (max-width: 770px) {
+	/* app header */
+	.app__header {
+		margin-bottom: 1em;
+		margin-top: 1em;
+	}
+
+	.app__header h1 {
+		font-size: 25px;
+	}
+
+	/* app main interface */
+	.app__main {
+		padding: 1em;
+	}
+
+	/* app header section carrying form */
+	.app__header-section {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.app__header-section > div {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	/* price labels */
+	.app__price-display {
+		display: grid;
+		grid-template-columns: calc(50% - 0.25em) calc(50% - 0.25em);
+		grid-column-gap: 0.5em;
+		padding: 0;
+	}
+
+	.app__price-display .item {
+		margin-left: 0;
+		width: 100%;
+		padding: 0.5em;
+	}
+
+	/* app form */
+	.app__form {
+		margin-bottom: 0.5em;
+		max-width: 370px;
+		width: 100%;
+		overflow: hidden;
+		font-size: 13px;
+	}
+	
+	.app__form.hidden {
+		max-height: 0;
+		overflow-y: hidden;
+	}
+
+	.app__form button {
+		width: 100%;
+		font-size: 13px;
+		padding: 0.7em;
+	}
+
+	.app__form label {
+		width: calc(50% - 0.25em);
+		margin: 0.25em 0;
+	}
+
+	.app__form input#quantityInput,
+    .app__form input#priceInput {
+		width: 100%;
+	}
+
+	.app__form label:first-child {
+		width: 100%;
+	}
+
+	.app__form label:last-child {
+		margin-left: 0.5em;
+	}
+
+	.app__form .form-inputs {
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+	/* shopping list */
+	.list-actions {
+		max-width: 100vw;
+	}
+
+	.list-main .item-info {
+		flex-direction: row;
+		max-width: 60vw;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	/* price display labels */
+	.app__price-display .item .label {
+		font-size: 10px;
+		opacity: 0.5;
+	}
+
+	.app__price-display .item .value {
+		font-size: 12px;
+	}
+	
+	/* app form */
+	.app__form input {
+		font-size: 13px;
+		padding: 0.7em;
+	}
+
+	.list-actions button {
+		font-size: 11px;
+	}
+
+	/* shopping list */
+	.app__items-list {
+		margin-top: 0.5em;
+	}
+
+	/* toast modal */
+	.toast-modal {
+		font-size: 14px;
+	}
+}

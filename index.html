@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abedi's Shoppie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
+</head>
+<body>
+  <div class="main-body container-fluid">
+    
+<!-- HEADER SECTION -->
+  <section class="header-section">
+    <div class="app_header uniform-align">
+      <div class="shoppie-header">
+        <h1 class="shoppie">
+          <span class="dot"></span>
+          Shoppie
+          <span class="one"></span>
+          <span class="two"></span>
+        </h1>
+      </div>
+            
+      <iconify-icon icon="bi:three-dots"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"></iconify-icon>
+            
+<!-- OFFCANVAS SECTION -->
+      <div class="offcanvas offcanvas-end" id="offcanvasRight">
+          <div class="close-btn">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+                
+          <div class="offcanvas-body row">
+            <label class="currency">
+              Currency:
+              <input class="currency-text" type="text" id="itemsCurrencyForm" maxlength="1" value="$">
+            </label>
+  
+            <label class="theme"> 
+              Theme:
+              <button class="theme-button" id="themeToggler">
+                <span class="moon"><i class="bi bi-moon-fill"></i></span>
+              </button>
+            </label>
+  
+            <label>
+              <button class="quick-action-button offcanvas-delete-all-button" id="offcanvas-delete-all-button">
+                Delete all
+                <i class="bi bi-trash"></i>
+              </button>
+            </label>
+  
+            <label>
+              <button class="quick-action-button offcanvas-purchase-all-button" onclick="purchaseAllItems()">
+                Purchase All
+                <i class="bi bi-receipt"></i>
+              </button>
+            </label>
+          </div>
+      </div>   
+    </div>
+  </section>
+
+<!-- ADD ITEM SECTION  -->
+    <section class="add-item-section">
+        <div class="text-center">
+            <div class="add-item row">
+
+              
+              <!-- shows when on a smaller screen -->
+              <div class="phone-screen hide ">
+                <div>
+                  <i class="bi bi-plus-lg" id="cross" onclick="showForm()"></i>
+                  <i class="bi bi-chevron-up" id="up" onclick="closeForm()"></i>
+                </div>
+                <hr>
+              </div>
+
+              <div class="name-quantity-price col-12 col-md-4 ">
+                  <form id="inputForm">
+                    <div class="row g-2">
+                             <div class="col-12 col-sm">
+                                 <a>Name Of Item:</a>
+                                 <input type="text" class="form-control" id="nameInput" required>
+                             </div>
+         
+                             <div class="col-sm col-sm-2 quantity">
+                                 <a>Quantity:</a>
+                                 <input type="number" class="form-control" id="quantityInput" value="1" min="1">
+                             </div>
+                         
+                             <div class="col-sm col-sm-2 price">
+                                 <a>Price:</a>
+                                 <input type="number" class="form-control" id="priceInput" value="0" min="0" required>
+                             </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-sm m-1 add-item-button" >
+                      <div id="addItemBtn"> Add item </div>
+                      <div class="hide" id="updateItemBtn"> Update </div>
+                    </button>
+                  </form>
+                </div>
+        
+                <div class="calculation col-12">
+                        <div class="total" id="totalPriceDiv">
+                            <span class="label" >Total:</span>
+                            <span id="total-price" class="value red">$0.00</span>
+                        </div>
+        
+                        <div class="unpurchased" id="balancePriceDiv">
+                            <span class="label">Unpurchased:</span>
+                            <span id="unpurchase-total" class="value red">$0.00</span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- BUTTONS SECTION  -->
+    <section class="button-section">
+        <div class="buttons">
+            <div class="btn-container container-fluid">
+                <button type="button" class="btn btn-danger btn-sm g-3" id="deleteAllButton">
+                    Delete All
+                    <i class="bi bi-trash"></i>
+                </button>
+    
+                <button type="button" class="btn btn-primary btn-sm g-3" >
+                    <div id="selectAllButton" onclick="selectAll()">
+                        Select All
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <div class="hide" id="unselectAllButton" onclick="unselectAll()" >
+                        Unselect all
+                        <i class="bi bi-check-circle "></i>
+                    </div>
+                </button>
+    
+                <button type="button" class="btn btn-danger btn-sm g-3" id="disabled" disabled onclick="deleteSelectedItems()">
+                    <i class="bi bi-trash-fill"></i>
+                    Delete Selected
+                </button>
+                
+                <button type="button" class="btn btn-primary btn-sm g-3" id="disabled" disabled onclick="purchaseSelectedItems()">
+                    <i class="bi bi-receipt"></i>
+                    Purchase Selected
+                </button>
+                
+                <button type="button" class="btn btn-primary btn-sm g-3" id="disabled" disabled onclick="unpurchaseSelectedItems()">
+                    <i class="bi bi-receipt-cutoff"></i>
+                    Unpurchase selected
+                </button>
+            </div>
+        </div>
+    </section>
+    
+<!-- ITEM LIST SECTION  -->
+    <section class="item-list-section">
+        <span class="line"></span>
+        
+        <div class="listed-items">
+
+        </div>
+    </section>
+
+<!-- MODALS-->
+<!-- TOAST ALERT -->
+    <div class="toast-container position-fixed top-0 end-0 p-3 ">
+      <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body" id="toastModal">
+          <div id="modalContent"></div>
+        </div>
+      </div>
+    </div>
+          
+  </div>
+</body>
+
+<script src="JS/darkmode.js"></script>
+<!-- <script src="JS/index.js"></script> -->
+<script src="JS/mapping.js"></script>
+</html>
